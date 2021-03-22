@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 parent.getItemAtPosition(position);
-                Log.d("Bitcoin", "" + parent.getItemAtPosition(position));
+                Log.d("BitcoinTracker", "" + parent.getItemAtPosition(position));
                 RequestParams requestParams = new RequestParams();
                 requestParams.put("currency",parent.getItemAtPosition(position));
                 letsDoSomeNetworking(requestParams);
@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                Log.d("Bitcoin", "Nothing selected");
+                Log.d("BitcoinTracker", "Nothing selected");
+
             }
         });
 
